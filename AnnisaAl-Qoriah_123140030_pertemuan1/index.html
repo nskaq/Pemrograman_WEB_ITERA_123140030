@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aplikasi Manajemen Tugas Mahasiswa</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="app-header">
+    <h1>MANAGEMENT TUGAS ANNISA</h1>
+  </header>
+
+  <main class="container">
+   
+    <section class="card">
+      <h2 id="form-title">Tambah Tugas</h2>
+      <form id="task-form" novalidate>
+        <input type="hidden" id="task-id" />
+        <div class="form-row">
+          <label for="name">Nama Tugas <span class="req">*</span></label>
+          <input type="text" id="name" placeholder="Masukkan Nama Tugas" required />
+          <small class="error" id="err-name"></small>
+        </div>
+        <div class="form-row">
+          <label for="course">Mata Kuliah <span class="req">*</span></label>
+          <input type="text" id="course" placeholder="Masukkan Nama Mata Kuliah" required />
+          <small class="error" id="err-course"></small>
+        </div>
+        <div class="form-row">
+          <label for="deadline">Deadline <span class="req">*</span></label>
+          <input type="date" id="deadline" required />
+          <small class="error" id="err-deadline"></small>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary" id="btn-submit">Tambah</button>
+          <button type="button" class="btn ghost" id="btn-reset" title="Reset form">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="filters card">
+      <h2>Pencarian Daftar Tugas</h2>
+      <div class="filter-grid">
+        <div>
+          <label for="status-filter">Status</label>
+          <select id="status-filter">
+            <option value="all">Semua</option>
+            <option value="completed">Selesai</option>
+            <option value="pending">Belum Selesai</option>
+          </select>
+        </div>
+        <div>
+          <label for="course-filter">Mata Kuliah</label>
+          <input type="text" id="course-filter" placeholder="Cari nama mata kuliah"/>
+        </div>
+        <div>
+          <label for="search-text">Tugas</label>
+          <input type="text" id="search-text" placeholder="Cari nama tugas"/>
+        </div>
+      </div>
+      <div class="summary">
+        <span id="incomplete-count">0</span> tugas belum selesai
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Daftar Tugas</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Nama Tugas</th>
+              <th>Mata Kuliah</th>
+              <th>Deadline</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="task-list">
+            
+          </tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="empty">Belum ada tugas. Tambahkan tugas baru di atas.</p>
+    </section>
+  </main>
+
+
+  <script src="app.js"></script>
+</body>
+</html>

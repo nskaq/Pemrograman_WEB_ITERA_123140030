@@ -1,0 +1,193 @@
+:root{
+  --pink-50:#fff0f6;
+  --pink-100:#ffe4f0;
+  --pink-200:#ffcfe6;
+  --pink-300:#ffb1d6;
+  --pink-400:#ff8fc4;
+  --pink-500:#ff6aaE;  /* utama */
+  --pink-600:#ff4f9e;
+  --pink-700:#e23b86;
+  --pink-800:#bf2f6f;
+  --pink-900:#8c214f;
+  --ink-900:#1f1f2a;
+  --ink-700:#3b3b49;
+  --ink-500:#535365;
+  --bg:#fff9fc;
+  --white:#ffffff;
+  --ring: #ffb1d6;
+}
+
+*{ box-sizing: border-box; }
+html, body{
+  margin:0; padding:0; font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg); color: var(--ink-900);
+}
+
+.app-header{
+  background: linear-gradient(135deg, var(--pink-500), var(--pink-300));
+  color: var(--white);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.app-header h1{ margin: 0 0 .25rem; font-weight: 800; }
+.app-header p{ margin:0; opacity:.95; }
+
+.container{
+  max-width: 980px; margin: -2rem auto 3rem; padding: 0 1rem;
+}
+
+.card{
+  background: var(--white);
+  border: 1px solid var(--pink-100);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(255,105,180,.15);
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h2{ margin: 0 0 .75rem; font-size: 1.15rem; color: var(--ink-900); }
+
+.form-row{
+  display:flex; flex-direction: column; gap:.4rem; margin-bottom: .9rem;
+}
+label{ font-weight: 600; color: var(--ink-700); }
+.req{ color: var(--pink-700); }
+
+input[type="text"], input[type="date"], select{
+  border:1.5px solid var(--pink-200);
+  border-radius: 10px;
+  padding:.65rem .8rem;
+  font-size: .98rem;
+  outline: none;
+  background: var(--pink-50);
+}
+input:focus, select:focus{
+  border-color: var(--pink-500);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.error{
+  color: var(--pink-800);
+  font-size: .82rem;
+  min-height: 1em;
+}
+
+.actions{ display:flex; gap:.6rem; }
+.btn{
+  border: 0; padding:.65rem 1rem; border-radius: 12px; cursor: pointer; font-weight: 700;
+  transition: transform .05s ease, box-shadow .2s ease, background .2s;
+}
+.btn:active{ transform: translateY(1px) }
+.btn.primary{
+  background: var(--pink-600); color: var(--white);
+  box-shadow: 0 6px 18px rgba(255, 79, 158, .25);
+}
+.btn.primary:hover{ background: var(--pink-700); }
+.btn.ghost{
+  background: var(--pink-100); color: var(--pink-800);
+}
+.btn.small{ padding:.45rem .7rem; border-radius: 10px; font-size: .9rem; }
+
+.filters .filter-grid{
+  display:grid; gap:.8rem; grid-template-columns: repeat(3,1fr);
+}
+@media (max-width:800px){ .filters .filter-grid{ grid-template-columns: 1fr; } }
+
+.summary{
+  margin-top:.6rem; font-weight:700; color: var(--pink-800);
+}
+
+.table-wrap{
+  overflow:auto; border:1px solid var(--pink-100); border-radius: 12px;
+}
+table{ width:100%; border-collapse: collapse; min-width:720px; }
+thead th{
+  text-align:left; padding:.8rem; background: var(--pink-100); color: var(--ink-700); font-weight:700;
+}
+tbody td{
+  padding:.75rem .8rem; border-top:1px solid var(--pink-100); vertical-align: middle;
+}
+
+.badge{
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.2rem .55rem; border-radius:999px; font-size:.82rem; font-weight:700;
+}
+.badge.done{ background: #e8fff1; color:#196e3b; border:1px solid #baf0d0; }
+.badge.pending{ background: #fff6f9; color: var(--pink-800); border:1px solid var(--pink-200); }
+
+.row-actions{ display:flex; gap:.4rem; }
+.action-link{
+  background: transparent; border:0; text-decoration: underline; cursor:pointer; font-weight:700;
+  color: var(--pink-700);
+}
+.action-link.danger{ color:#b3261e; }
+.checkbox{
+  display:inline-flex; align-items:center; gap:.5rem; cursor:pointer; font-weight:600; color: var(--ink-700);
+}
+input[type="checkbox"]{
+  width: 18px; height: 18px; accent-color: var(--pink-600);
+}
+
+.empty{ text-align:center; padding:1rem; color: var(--ink-500); }
+
+
+/* ==== Tambahan style yang belum ada ==== */
+
+/* Kartu filter: beri spacing & konsistensi judul */
+.filters{
+  padding-top: .5rem; /* card-mu sudah punya padding dasar; ini opsional untuk jeda judul */
+}
+.filters h2{
+  margin-bottom: .5rem;
+}
+
+/* Bikin label & kontrol sejajar rapi di dasar baris */
+.filters .filter-grid > div{
+  display: grid;
+  grid-template-rows: auto 1fr; /* label di atas, kontrol di bawah */
+  align-items: end;              /* semua kontrol "segaris" di bawah */
+}
+
+/* Samakan tinggi kontrol input & select */
+.filters .filter-grid input[type="text"],
+.filters .filter-grid select{
+  width: 100%;
+  height: 44px;
+  line-height: 44px;     /* bantu vertikal align untuk input */
+}
+
+/* Normalisasi tampilan select agar mirip input */
+/* === Fix overflow pada select Status === */
+.filters .filter-grid select {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 .8rem;
+  border: 1.5px solid var(--pink-200);
+  border-radius: 10px;
+  background-color: var(--pink-50);
+  color: var(--ink-900);
+
+  /* pastikan tidak overflow dan panah dropdown proporsional */
+  background-image: linear-gradient(45deg, transparent 50%, var(--pink-600) 50%),
+                    linear-gradient(135deg, var(--pink-600) 50%, transparent 50%),
+                    linear-gradient(to right, var(--pink-50), var(--pink-50));
+  background-position: calc(100% - 18px) center, calc(100% - 12px) center, 0 0;
+  background-size: 6px 6px, 6px 6px, 100% 100%;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+  overflow: hidden; /* mencegah panah atau teks keluar box */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  appearance: none;
+}
+
+/* Tinggi input teks disamakan dengan select */
+.filters .filter-grid input[type="text"] {
+  height: 44px;
+  line-height: 44px;
+  padding: 0 .8rem;
+  border: 1.5px solid var(--pink-200);
+  border-radius: 10px;
+  background-color: var(--pink-50);
+}
