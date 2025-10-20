@@ -1,15 +1,15 @@
 # Aplikasi Manajemen Tugas Mahasiswa
 
-Aplikasi Manajemen Tugas Mahasiswa merupakan aplikasi berbasis web yang digunakan untuk membantu mahasiswa dalam mengelola aktivitas akademik seperti mencatat, mengedit, menandai selesai, dan menghapus tugas. Seluruh data disimpan secara lokal di browser menggunakan `localStorage`, sehingga tetap tersimpan meskipun halaman ditutup atau direfresh.
+Aplikasi Manajemen Tugas Mahasiswa merupakan aplikasi berbasis web yang digunakan untuk membantu mahasiswa (saya) dalam mengelola aktivitas akademik seperti mencatat, mengedit, menandai selesai, dan menghapus daftar tugas. Seluruh data disimpan secara lokal di browser menggunakan `localStorage`, sehingga tetap tersimpan meskipun halaman ditutup atau direfresh.
 
 ---
 
 ## Fitur Aplikasi
 
 - Menambahkan tugas baru (nama tugas, mata kuliah, deadline)
-- Mengedit tugas yang sudah ada
-- Menandai tugas sebagai selesai atau belum selesai
-- Menghapus tugas yang tidak diperlukan
+- Mengedit daftar tugas yang sudah ada
+- Menandai daftar tugas sebagai selesai atau belum selesai
+- Menghapus daftar tugas yang tidak diperlukan
 - Filter tugas berdasarkan status atau mata kuliah
 - Pencarian tugas berdasarkan nama atau mata kuliah
 - Menampilkan jumlah tugas yang belum selesai
@@ -26,21 +26,15 @@ Aplikasi Manajemen Tugas Mahasiswa merupakan aplikasi berbasis web yang digunaka
 | ![Screenshot 2](screenshots/list.png) | Daftar tugas dengan status dan aksi |
 | ![Screenshot 3](screenshots/filter.png) | Fitur pencarian dan filter tugas |
 
-*Catatan: Ganti nama file gambar sesuai dengan screenshot yang Anda miliki.*
-
----
-
 ## Cara Menjalankan Aplikasi
 
-1. Pastikan Anda memiliki tiga file berikut dan simpan dalam satu folder:
+1. Memiliki tiga file berikut dan disimpan dalam satu folder:
    - `index.html`
    - `styles.css`
    - `app.js`
-2. Buka file `index.html` menggunakan browser (Chrome, Edge, Firefox, dan sebagainya).
+2. Buka file `index.html` menggunakan browser.
 3. Aplikasi dapat langsung digunakan tanpa instalasi tambahan.
 4. Data tugas akan otomatis tersimpan di `localStorage` browser.
-
----
 
 ## Daftar Fitur dan Status Implementasi
 
@@ -55,7 +49,6 @@ Aplikasi Manajemen Tugas Mahasiswa merupakan aplikasi berbasis web yang digunaka
 | 7 | Validasi form input | Selesai |
 | 8 | Penyimpanan data di localStorage | Selesai |
 
----
 
 ## Penjelasan Teknis
 
