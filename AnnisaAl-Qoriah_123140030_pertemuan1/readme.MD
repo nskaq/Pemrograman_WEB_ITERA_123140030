@@ -22,7 +22,7 @@ Aplikasi Manajemen Tugas Mahasiswa merupakan aplikasi berbasis web yang digunaka
 
 | Tampilan | Deskripsi |
 |----------|-----------|
-| ![Screenshot 1](https://github.com/user-attachments/assets/00b0f6c4-b5ea-4570-ad33-a9220e665911) | Form tambah tugas dengan validasi input |
+| ![Screenshot 1](https://github.com/user-attachments/assets/9e7a6915-916a-40b1-acfa-78c189f64088) | Form tambah tugas dengan validasi input |
 | ![Screenshot 2](https://github.com/user-attachments/assets/0b75475b-5dc3-4832-9b9a-1e299e4a974d) | Daftar tugas dengan status dan aksi |
 | ![Screenshot 3](https://github.com/user-attachments/assets/53e1e831-0dd7-419e-a32c-d893122128e2) | Fitur pencarian dan filter tugas |
 
