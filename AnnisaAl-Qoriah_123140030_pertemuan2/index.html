@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Dashboard — Places To Visit</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="logo">✈️</div>
+      <div>
+        <h1>Places To Visit</h1>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="container">
+    <!-- Form -->
+    <section class="card form-card">
+      <h2 id="form-title">Tambah Destinasi</h2>
+      <form id="place-form">
+        <input type="hidden" id="place-id" />
+        <div class="grid">
+          <div class="form-group">
+            <label for="title">Nama Tempat <span>*</span></label>
+            <input id="title" type="text" placeholder="Masukkan Nama Destinasi" required />
+          </div>
+          <div class="form-group">
+            <label for="location">Lokasi</label>
+            <input id="location" type="text" placeholder="Kota/Negara"/>
+          </div>
+          <div class="form-group">
+            <label for="targetDate">Target Tanggal</label>
+            <input id="targetDate" type="date"/>
+          </div>
+          <div class="form-group">
+            <label for="priority">Prioritas</label>
+            <select id="priority">
+              <option value="medium">Sedang</option>
+              <option value="high">Tinggi</option>
+              <option value="low">Rendah</option>
+            </select>
+          </div>
+          <div class="form-group span-2">
+            <label for="notes">Catatan</label>
+            <textarea id="notes" rows="3" placeholder="Apa yang mau dilakukan di sana?"></textarea>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary" id="submit-btn">Simpan</button>
+          <button type="button" class="btn ghost" id="reset-btn">Reset</button>
+          <button type="button" class="btn danger" id="clear-all-btn" title="Hapus semua data">Hapus Semua</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Statistik Ringkas -->
+    <section class="stats">
+      <div class="stat card">
+        <div class="stat-num" id="stat-total">0</div>
+        <div class="stat-label">Total Tempat</div>
+      </div>
+      <div class="stat card">
+        <div class="stat-num" id="stat-visited">0</div>
+        <div class="stat-label">Sudah Dikunjungi</div>
+      </div>
+      <div class="stat card">
+        <div class="stat-num" id="stat-upcoming">0</div>
+        <div class="stat-label">Akan Datang</div>
+      </div>
+    </section>
+
+    <!-- List -->
+    <section class="card list-card">
+      <div class="list-header">
+        <h2>Daftar Tempat</h2>
+        <div class="filters">
+          <select id="filter-status" title="Filter status">
+            <option value="all">Semua</option>
+            <option value="planned">Belum dikunjungi</option>
+            <option value="visited">Sudah dikunjungi</option>
+          </select>
+
+        </div>
+      </div>
+
+      <ul id="place-list" class="place-list"></ul>
+
+      
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Disimpan secara lokal di browser menggunakan <strong>localStorage</strong></small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
