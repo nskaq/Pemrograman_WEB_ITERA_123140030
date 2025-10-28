@@ -19,7 +19,7 @@ Selain itu, terdapat statistik otomatis yang menampilkan jumlah total tempat, te
 |-----------|------------|
 | ![Form Tambah Tempat](https://github.com/user-attachments/assets/036c935a-3f59-48eb-b912-db9bd222bffa) | Form input untuk menambahkan tempat baru dengan kolom nama, lokasi, tanggal, prioritas, dan catatan. |
 | ![Daftar Tempat](https://github.com/user-attachments/assets/7b56629a-dba4-4de9-9556-b56f327f78e5) | Tampilan daftar tempat dengan tombol edit dan hapus. |
-| ![Statistik Ringkas](https://github.com/user-attachments/assets/c9bf4bb3-4465-4106-86ee-a37cdf30a906") | Bagian statistik yang menampilkan total tempat, jumlah yang sudah dikunjungi, dan yang akan datang. |
+| ![Statistik Ringkas](https://github.com/user-attachments/assets/c9bf4bb3-4465-4106-86ee-a37cdf30a906) | Bagian statistik yang menampilkan total tempat, jumlah yang sudah dikunjungi, dan yang akan datang. |
 
 ---
 
