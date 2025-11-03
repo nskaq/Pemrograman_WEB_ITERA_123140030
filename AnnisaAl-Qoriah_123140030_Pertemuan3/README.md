@@ -126,10 +126,19 @@ Tujuannya adalah memastikan setiap fitur utama (tambah, hapus, filter, pencarian
 
 ### Screenshot Hasil Test
 
-![Uji validasi & penambahan buku](https://github.com/user-attachments/assets/a3b15b21-9f8f-4051-a167-6997215d9d5e) (https://github.com/user-attachments/assets/2ee0bfe8-27c2-4ac7-ba0d-7459441ec569)
+#### Uji validasi & penambahan buku
+![Uji validasi & penambahan buku](https://github.com/user-attachments/assets/a3b15b21-9f8f-4051-a167-6997215d9d5e) 
+![Uji validasi & penambahan buku](https://github.com/user-attachments/assets/2ee0bfe8-27c2-4ac7-ba0d-7459441ec569)
+
+#### Uji filter dan pencarian
 ![ Uji filter dan pencarian](https://github.com/user-attachments/assets/76400dda-2f8a-431b-837e-7d2ca579fe20)
+
+#### Uji penghapusan buku
 ![Uji penghapusan buku](https://github.com/user-attachments/assets/67958523-1318-47db-9e01-b5b529ba7201)
-![Uji edit buku](https://github.com/user-attachments/assets/611dbf8b-8c61-4369-b3fe-9ee89d9c0ea1) (https://github.com/user-attachments/assets/653733a4-6eb0-4742-af43-f3f8979bd6b1)
+
+#### Uji edit buku
+![Uji edit buku](https://github.com/user-attachments/assets/611dbf8b-8c61-4369-b3fe-9ee89d9c0ea1) 
+![Uji edit buku](https://github.com/user-attachments/assets/653733a4-6eb0-4742-af43-f3f8979bd6b1)
 
 
 
