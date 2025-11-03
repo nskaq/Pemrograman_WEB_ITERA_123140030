@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", ui-sans-serif, system-ui;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular;
+  --font-jersey: "Jersey 10", ui-sans-serif;
+
+  --color-brand-primary: #B77466;
+  --color-brand-soft:    #E2B59A;
+  --color-brand-pale:    #FFE1AF;
+  --color-brand-brown:   #957C62;
+
+  --radius-xl2: 1.25rem;
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.06);
+}
+
+/* warna background lembut */
+:root { --bg: 255 245 235; }
+
+/* utilitas berbasis token di atas akan dikenali sekarang */
+body {
+  @apply bg-[rgb(var(--bg))] text-brand-brown font-[var(--font-poppins)];
+}
+
+/* helpers */
+.container-xl { @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+/* cards & buttons */
+.card { 
+  @apply bg-white/90 backdrop-blur rounded-[var(--radius-xl2)] p-5 border border-brand-soft/30;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-[var(--radius-xl2)] px-4 py-2 font-semibold transition active:scale-[0.98]; }
+.btn-primary { @apply bg-brand-primary text-white hover:brightness-110; }
+.btn-ghost   { @apply bg-transparent text-brand-primary hover:bg-brand-pale/50; }
+.btn-danger  { @apply bg-red-500 text-white hover:brightness-110; }
+
+.input  { @apply w-full rounded-[var(--radius-xl2)] border border-brand-soft/60 bg-white px-4 py-2 outline-none focus:ring-2 focus:ring-brand-primary/40; }
+.select { @apply w-full rounded-[var(--radius-xl2)] border border-brand-soft/60 bg-white px-4 py-2 outline-none focus:ring-2 focus:ring-brand-primary/40; }
+
+.badge { @apply inline-block rounded-full px-3 py-1 text-xs font-semibold bg-brand-pale text-brand-brown border border-brand-soft/50; }
