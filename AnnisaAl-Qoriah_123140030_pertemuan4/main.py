@@ -1,4 +1,4 @@
-1# Annisa Al-Qoriah
+# Annisa Al-Qoriah
 # 123140030
 # Pertemuan 4 - Program Pengelolaan Data Nilai Mahasiswa
 data_mahasiswa = [
