@@ -6,8 +6,8 @@ Program ini merupakan implementasi sederhana dari konsep OOP Python seperti clas
 ## 🧾 Fitur Utama Program
 ### 1. Menambahkan Item ke Perpustakaan
 Pengguna dapat menambah dua jenis item:
-*Buku (Book) → memiliki atribut ID, judul, penulis, kategori
-*Majalah (Magazine) → memiliki atribut ID, judul, penerbit, edisi
+* Buku (Book) → memiliki atribut ID, judul, penulis, kategori
+* Majalah (Magazine) → memiliki atribut ID, judul, penerbit, edisi
 
 ### 2. Menampilkan Semua Item
 Menampilkan seluruh koleksi item yang telah tersimpan di perpustakaan.
