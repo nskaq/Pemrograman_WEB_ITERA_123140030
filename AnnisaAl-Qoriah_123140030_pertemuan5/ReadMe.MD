@@ -48,41 +48,40 @@ Pencarian menggunakan kata kunci (keyword), tidak case-sensitive.
 
 ## 📘 Diagram Class
 Berikut diagram class sederhana berdasarkan struktur program:
-               +---------------------+
-               |   LibraryItem (ABC) |
-               +---------------------+
-               | - __id              |
-               | - _title            |
-               | - _available        |
-               +---------------------+
-               | + id (property)     |
-               | + title (property)  |
-               | + available         |
-               | + set_available()   |
-               | + display_info() *  |
-               +---------------------+
-                         ^
-                         |
-         +---------------+----------------+
-         |                                |
-+-------------------+           +-------------------+
-|       Book        |           |     Magazine      |
-+-------------------+           +-------------------+
-| - _author         |           | - _Author         |
-| - _kategori       |           | - _edisi          |
-+-------------------+           +-------------------+
-| + display_info()  |           | + display_info()  |
-+-------------------+           +-------------------+
+### classDiagram
+    class LibraryItem {
+        - int __id
+        - str _title
+        - bool _available
+        + id
+        + title
+        + available
+        + set_available(status)
+        + display_info()
+    }
 
+    class Book {
+        - str _author
+        - str _kategori
+        + display_info()
+    }
 
-+---------------------+
-|      Library        |
-+---------------------+
-| - _items            |
-+---------------------+
-| + add_item()        |
-| + show_all_items()  |
-| + search_by_id()    |
-| + search_by_title() |
-+---------------------+
+    class Magazine {
+        - str _Author
+        - str _edisi
+        + display_info()
+    }
+
+    class Library {
+        - list _items
+        + add_item(item)
+        + show_all_items()
+        + search_by_id(item_id)
+        + search_by_title(keyword)
+    }
+
+    LibraryItem <|-- Book
+    LibraryItem <|-- Magazine
+    Library "1" o-- "*" LibraryItem
+
 ---
